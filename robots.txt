@@ -1,0 +1,20 @@
+# robots.txt for Alliance Physio
+# https://mississaugaphysio.ca
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /*.json$
+
+# Specific bot guidance
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://mississaugaphysio.ca/sitemap.xml
