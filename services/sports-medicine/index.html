@@ -10,14 +10,14 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="googlebot" content="index, follow">
 
-<link rel="canonical" href="https://mississaugaphysio.ca/services/sports-medicine/">
+<link rel="canonical" href="https://alliancephysio.com/services/sports-medicine/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Sports Medicine in Mississauga | Dr. Noor Amin, MD | Alliance Physio">
 <meta property="og:description" content="In-house Sports Medicine Doctor in Meadowvale, Mississauga. Dr. Noor Amin, CASEM Diplomat and U of T Sports Medicine Fellow, offers ultrasound-guided assessments and advanced injection therapies including PRP, cortisone, hyaluronic acid, and Arthrosamid. Family physician referral required.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://mississaugaphysio.ca/services/sports-medicine/">
-<meta property="og:image" content="https://mississaugaphysio.ca/assets/hero.jpg">
+<meta property="og:url" content="https://alliancephysio.com/services/sports-medicine/">
+<meta property="og:image" content="https://alliancephysio.com/assets/hero.jpg">
 <meta property="og:locale" content="en_CA">
 <meta property="og:site_name" content="Alliance Physio">
 
@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sports Medicine in Mississauga | Dr. Noor Amin, MD | Alliance Physio">
 <meta name="twitter:description" content="In-house Sports Medicine Doctor in Meadowvale, Mississauga. Dr. Noor Amin, CASEM Diplomat and U of T Sports Medicine Fellow, offers ultrasound-guided assessments and advanced injection therapies including PRP, cortisone, hyaluronic acid, and Arthrosamid. Family physician referral required.">
-<meta name="twitter:image" content="https://mississaugaphysio.ca/assets/hero.jpg">
+<meta name="twitter:image" content="https://alliancephysio.com/assets/hero.jpg">
 
 <!-- Geo / Local -->
 <meta name="geo.region" content="CA-ON">
@@ -45,11 +45,11 @@
 {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  "@id": "https://mississaugaphysio.ca/#clinic",
+  "@id": "https://alliancephysio.com/#clinic",
   "name": "Alliance Physio",
-  "url": "https://mississaugaphysio.ca/",
-  "image": "https://mississaugaphysio.ca/assets/hero.jpg",
-  "logo": "https://mississaugaphysio.ca/assets/logo-dark.png",
+  "url": "https://alliancephysio.com/",
+  "image": "https://alliancephysio.com/assets/hero.jpg",
+  "logo": "https://alliancephysio.com/assets/logo-dark.png",
   "telephone": "+1-905-785-9952",
   "email": "alliancephysiowellness@gmail.com",
   "priceRange": "$$",
@@ -79,9 +79,9 @@
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00"}
   ],
   "potentialAction": {
-    "@type": "ReserveAction",
-    "target": "https://alliancephysio.janeapp.com/",
-    "name": "Book Appointment"
+    "@type": "ContactAction",
+    "target": "https://alliancephysio.com/contact/",
+    "name": "Contact for Referral"
   },
   "sameAs": []
 }
@@ -92,9 +92,9 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mississaugaphysio.ca/"},
-    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://mississaugaphysio.ca/services/"},
-    {"@type": "ListItem", "position": 3, "name": "Sports Medicine", "item": "https://mississaugaphysio.ca/services/sports-medicine/"}
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://alliancephysio.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://alliancephysio.com/services/"},
+    {"@type": "ListItem", "position": 3, "name": "Sports Medicine", "item": "https://alliancephysio.com/services/sports-medicine/"}
   ]
 }
 </script>
@@ -2151,7 +2151,7 @@ section { padding: 6rem 0; }
         <h2>Ready to move <em>without pain?</em></h2>
         <p>A referral is required from your family physician or a walk-in physician. A consultation includes a clinical assessment and real-time ultrasound examination of the affected area, followed by a personalized treatment recommendation.</p>
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-          <a href="https://alliancephysio.janeapp.com/" target="_blank" rel="noopener" class="btn-primary">Book Through JaneApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/contact/" class="btn-primary">Contact the Clinic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="tel:9057859952" class="btn-secondary">Call 905-785-9952</a>
         </div>
         <p style="margin-top:2rem; font-size:0.85rem; color:var(--text-muted); font-style:italic;">Information on this page is for educational purposes only and does not constitute medical advice. Pricing shown is an approximate guide. Exact pricing is confirmed at consultation.</p>
@@ -2482,7 +2482,7 @@ function renderDtResult(key) {
   const r = dtResults[key];
   const dt = document.getElementById('decisionTree');
   if (!dt) return;
-  dt.innerHTML = `<div class="dt-result"><div class="dt-result-badge">Your recommended treatment</div><h3>${r.name}</h3><div class="dt-result-sub">${r.subtitle}</div><div class="dt-result-price">${r.price}</div><p>${r.desc}</p><div class="dt-also">${r.also}</div><div class="dt-actions"><button class="dt-btn-ghost" onclick="dtRestart()">Start Over</button>${dtHistory.length > 0 ? '<button class="dt-btn-ghost" onclick="dtBack()">Back</button>' : ''}<a href="https://alliancephysio.janeapp.com/" target="_blank" rel="noopener" class="btn-primary" style="background:var(--blue-sky); color:var(--blue-ink); padding:0.65rem 1.25rem; font-size:0.85rem;">Book Through JaneApp</a></div></div>`;
+  dt.innerHTML = `<div class="dt-result"><div class="dt-result-badge">Your recommended treatment</div><h3>${r.name}</h3><div class="dt-result-sub">${r.subtitle}</div><div class="dt-result-price">${r.price}</div><p>${r.desc}</p><div class="dt-also">${r.also}</div><div class="dt-actions"><button class="dt-btn-ghost" onclick="dtRestart()">Start Over</button>${dtHistory.length > 0 ? '<button class="dt-btn-ghost" onclick="dtBack()">Back</button>' : ''}<a href="/contact/" class="btn-primary" style="background:var(--blue-sky); color:var(--blue-ink); padding:0.65rem 1.25rem; font-size:0.85rem;">Contact for Referral Process</a></div></div>`;
 }
 function dtRestart() { dtHistory = []; renderDtNode('start'); }
 function dtBack() { if (dtHistory.length > 0) { const prev = dtHistory.pop(); renderDtNode(prev); } }
