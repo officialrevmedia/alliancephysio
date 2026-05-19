@@ -26,7 +26,7 @@ Built as a static site, optimized for SEO, ready to deploy to GitHub Pages.
    - Save
 
 4. **Custom domain** (optional but recommended):
-   - Edit the `CNAME` file to contain your domain (e.g. `mississaugaphysio.ca`)
+   - Edit the `CNAME` file to contain your domain (e.g. `alliancephysio.com`)
    - In Settings -> Pages, add your custom domain
    - In your DNS provider, add either:
      - **A records** pointing to GitHub's IPs:
