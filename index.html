@@ -1613,18 +1613,23 @@ section { padding: 6rem 0; }
   .handout-banner-visual { max-width: 200px; }
 }
 @media (max-width: 720px) {
-  section { padding: 4rem 0; }
+  section { padding: 3.25rem 0; }
   .container, .container-narrow { padding: 0 1.25rem; }
-  .header-inner { padding: 0.85rem 1.25rem; gap: 1rem; }
+  .header-inner { padding: 0.7rem 1.1rem; gap: 0.75rem; }
+  .logo { height: 42px; }
+  .logo img { height: 42px; }
+  .site-header { position: sticky; }
   .utility-inner { padding: 0.5rem 1.25rem; font-size: 0.72rem; }
   .utility-left { font-size: 0; }
   .utility-icon { font-size: 0.7rem; }
   .utility-icon svg { width: 13px; height: 13px; }
-  .nav-main { display: none; position: fixed; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 1rem; border-top: 1px solid var(--grey-line); align-items: stretch; gap: 0; max-height: 80vh; overflow-y: auto; box-shadow: var(--shadow-lg); }
+  .nav-main { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 0.75rem; border-top: 1px solid var(--grey-line); align-items: stretch; gap: 0.15rem; max-height: calc(100vh - 120px); overflow-y: auto; box-shadow: var(--shadow-lg); -webkit-overflow-scrolling: touch; }
   .nav-main.mobile-open { display: flex; }
   .nav-main .nav-link { width: 100%; text-align: left; padding: 0.85rem 1rem; border-radius: 8px; }
-  .dropdown { position: static; transform: none; min-width: 100%; box-shadow: none; border: none; padding: 0.5rem 0 0.5rem 1rem; margin-bottom: 0; background: var(--off-white); border-radius: 8px; }
+  .dropdown { position: static; transform: none; min-width: 100%; box-shadow: none; border: none; padding: 0.35rem 0 0.35rem 0.75rem; margin: 0.15rem 0; background: var(--off-white); border-radius: 8px; }
   .dropdown.open { display: grid; grid-template-columns: 1fr; }
+  .dropdown a { padding: 0.6rem 0.75rem; font-size: 0.85rem; }
+  .dropdown a small { font-size: 0.68rem; }
   .mobile-toggle { display: flex; }
   .btn-book { padding: 0.65rem 1.1rem; font-size: 0.82rem; }
   .header-inner .btn-book { display: none; }
@@ -1635,7 +1640,7 @@ section { padding: 6rem 0; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .service-card { flex: 0 0 calc(100% - 0.25rem); }
   .services-head-row { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .conditions-tabs { gap: 0.4rem; }
   .cond-tab { padding: 0.5rem 0.85rem; font-size: 0.82rem; }
@@ -1646,10 +1651,86 @@ section { padding: 6rem 0; }
   .dt-wrap { padding: 1.75rem; }
   .dt-q { font-size: 1.3rem; }
   .float-card { display: none; }
-  .hero { padding-top: 2rem; }
-  .page-hero { padding: 3rem 0 2.5rem; }
+  .hero { padding-top: 1.5rem; }
+  .page-hero { padding: 2.5rem 0 2rem; }
   .tx-tabs { overflow-x: auto; flex-wrap: nowrap; }
   .tx-tab { white-space: nowrap; }
+
+  /* ── MOBILE SPACING CLEANUP ── */
+  /* Headings: tighter line height and balanced size on small screens */
+  h1 { font-size: clamp(2rem, 8vw, 2.6rem); line-height: 1.1; }
+  h2 { font-size: clamp(1.65rem, 6vw, 2.1rem); line-height: 1.15; }
+  h3 { font-size: 1.3rem; }
+  p { font-size: 0.97rem; }
+
+  /* Hero: reduce excess vertical gaps */
+  .hero-grid { gap: 1.5rem; padding-top: 0.5rem; }
+  .hero-content { padding: 0.5rem 0 1.5rem; }
+  .hero-image-frame { max-width: 100%; aspect-ratio: 4/3; }
+  .hero-eyebrow, .section-eyebrow { margin-bottom: 1rem; }
+  .hero-cta-row { gap: 0.75rem; flex-wrap: wrap; }
+  .hero-cta-row .btn-primary, .hero-cta-row .btn-ghost { width: 100%; justify-content: center; }
+
+  /* Buttons: full-width and comfortable tap targets on mobile */
+  .btn-primary, .btn-ghost { padding: 0.9rem 1.5rem; font-size: 0.92rem; }
+
+  /* Section headers: consistent bottom spacing */
+  .section-head { margin-bottom: 2rem; }
+  .section-head p { font-size: 0.97rem; }
+
+  /* Cards: comfortable internal padding */
+  .why-card, .value-card, .service-detail-card { padding: 1.5rem; }
+
+  /* Intro / Amin / sports hero: cleaner stacking */
+  .intro-grid, .amin-grid, .sports-hero-inner { gap: 2rem; }
+  .amin-portrait { max-width: 280px; }
+  .intro-content, .amin-content { padding: 0; }
+
+  /* Trust bar numbers slightly smaller to avoid wrapping */
+  .trust-num { font-size: 1.75rem; }
+  .trust-label { font-size: 0.72rem; }
+
+  /* Footer: comfortable spacing between stacked columns */
+  .footer { padding-top: 3rem; }
+  .footer-brand { margin-bottom: 0.5rem; }
+  .footer-contact-item { margin-bottom: 0.5rem; }
+  .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; padding-top: 1.5rem; }
+
+  /* Conditions page mobile spacing */
+  .cond-hero { padding: 2rem 1.25rem 2.5rem; }
+  .cond-hero-content h1 { font-size: clamp(1.9rem, 7vw, 2.4rem); }
+  .cond-hero-stats { gap: 1.25rem; flex-wrap: wrap; }
+  .cond-hero-stat .num { font-size: 1.75rem; }
+  .cond-filter-bar { padding: 1rem 0; }
+  .cond-filter-bar .container { gap: 0.85rem; }
+  .cond-tabs-wrap { gap: 0.4rem; }
+  .cond-tab-pill { padding: 0.5rem 0.85rem; font-size: 0.8rem; }
+  .cond-grid-section { padding: 2.5rem 0 3rem; }
+  .cond-region-block { margin-bottom: 2.75rem; }
+  .cond-region-header { gap: 0.85rem; margin-bottom: 1.5rem; }
+  .cond-region-num { font-size: 1.75rem; }
+  .cond-region-header h3 { font-size: 1.35rem; }
+  .cond-card-v2 { padding: 1.4rem 1.25rem 1.1rem; }
+  .cond-cta { padding: 3rem 1.5rem; }
+  .cond-cta-card h2 { font-size: 1.6rem; }
+  .cond-cta-actions { flex-direction: column; }
+  .cond-cta-actions .btn-primary, .cond-cta-actions .btn-ghost { width: 100%; justify-content: center; }
+
+  /* Contact page mobile */
+  .contact-form { padding: 1.75rem 1.5rem; }
+
+  /* Sports medicine specifics */
+  .pillars-grid { gap: 1.25rem; }
+  .tx-content { padding: 1.5rem; }
+}
+
+@media (max-width: 400px) {
+  .container, .container-narrow { padding: 0 1rem; }
+  .trust-bar-inner { grid-template-columns: 1fr; }
+  .trust-item { border-bottom: 1px solid rgba(21,94,122,0.08); padding: 0.85rem 0; }
+  .trust-item:last-child { border-bottom: none; }
+  .cond-hero-stats { gap: 1rem; }
+  h1 { font-size: 1.85rem; }
 }
 </style>
 </head>
@@ -2088,7 +2169,7 @@ section { padding: 6rem 0; }
               Learn More About Sports Medicine
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://alliancephysio.janeapp.com/" target="_blank" rel="noopener" class="btn-secondary">Book Through JaneApp</a>
+            <a href="/contact/" class="btn-secondary">Contact for Referral Info</a>
           </div>
         </div>
       </div>
@@ -2305,7 +2386,44 @@ if (header) {
 const mobileToggle = document.getElementById('mobileToggle');
 const navMain = document.getElementById('navMain');
 if (mobileToggle && navMain) {
-  mobileToggle.addEventListener('click', () => navMain.classList.toggle('mobile-open'));
+  const menuIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+  const closeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+
+  function setMenu(open) {
+    if (open) {
+      navMain.classList.add('mobile-open');
+      mobileToggle.innerHTML = closeIcon;
+      mobileToggle.setAttribute('aria-expanded', 'true');
+    } else {
+      navMain.classList.remove('mobile-open');
+      mobileToggle.innerHTML = menuIcon;
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setMenu(!navMain.classList.contains('mobile-open'));
+  });
+
+  // Close menu when any nav link is tapped (but not the Services dropdown toggle)
+  navMain.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
+  });
+
+  // Close menu when tapping outside of it
+  document.addEventListener('click', (e) => {
+    if (navMain.classList.contains('mobile-open') &&
+        !navMain.contains(e.target) &&
+        !mobileToggle.contains(e.target)) {
+      setMenu(false);
+    }
+  });
+
+  // Close menu on window resize to desktop width
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) setMenu(false);
+  });
 }
 
 // ── SERVICES DROPDOWN ──
@@ -2546,7 +2664,7 @@ function renderDtResult(key) {
   const r = dtResults[key];
   const dt = document.getElementById('decisionTree');
   if (!dt) return;
-  dt.innerHTML = `<div class="dt-result"><div class="dt-result-badge">Your recommended treatment</div><h3>${r.name}</h3><div class="dt-result-sub">${r.subtitle}</div><div class="dt-result-price">${r.price}</div><p>${r.desc}</p><div class="dt-also">${r.also}</div><div class="dt-actions"><button class="dt-btn-ghost" onclick="dtRestart()">Start Over</button>${dtHistory.length > 0 ? '<button class="dt-btn-ghost" onclick="dtBack()">Back</button>' : ''}<a href="https://alliancephysio.janeapp.com/" target="_blank" rel="noopener" class="btn-primary" style="background:var(--blue-sky); color:var(--blue-ink); padding:0.65rem 1.25rem; font-size:0.85rem;">Book Through JaneApp</a></div></div>`;
+  dt.innerHTML = `<div class="dt-result"><div class="dt-result-badge">Your recommended treatment</div><h3>${r.name}</h3><div class="dt-result-sub">${r.subtitle}</div><div class="dt-result-price">${r.price}</div><p>${r.desc}</p><div class="dt-also">${r.also}</div><div class="dt-actions"><button class="dt-btn-ghost" onclick="dtRestart()">Start Over</button>${dtHistory.length > 0 ? '<button class="dt-btn-ghost" onclick="dtBack()">Back</button>' : ''}<a href="/contact/" class="btn-primary" style="background:var(--blue-sky); color:var(--blue-ink); padding:0.65rem 1.25rem; font-size:0.85rem;">Contact for Referral Process</a></div></div>`;
 }
 function dtRestart() { dtHistory = []; renderDtNode('start'); }
 function dtBack() { if (dtHistory.length > 0) { const prev = dtHistory.pop(); renderDtNode(prev); } }
